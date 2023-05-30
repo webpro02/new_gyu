@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<span>
+<p th:text="@{'사용자 이름: ' + ${name}}"></p>
+<p th:text="@{'사용자 이메일: ' + ${email}}"></p>
+<p th:text="@{'사용자 엑세스 토큰: ' + ${accesstoken}}"></p>
+</span>
+<a th:href="@{'https://www.facebook.com/logout.php?next=http://localhost:8080/logout
+&access_token=' + ${accesstoken} + '&client_id=828409408988555&client_secret=8671694634fe7e625a0590a101c0c88c'}">
+logout!
+</a>
+</body>
+</html>
